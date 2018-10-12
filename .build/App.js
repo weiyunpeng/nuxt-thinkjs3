@@ -3,6 +3,10 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '../client/assets/css/main.css'
 
+import '../client/assets/css/animate.min.css'
+
+import '../node_modules/muse-ui/dist/muse-ui.css'
+
 
 import _6f6c098b from '../client/layouts/default.vue'
 

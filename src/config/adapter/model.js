@@ -17,8 +17,8 @@ module.exports = {
     mysql: {
         logConnect: isDev,
         handle: mysql,
-        database: 'mystub',
-        prefix: 'mystub_',
+        database: 'picker',
+        prefix: 'picker_',
         // charset: 'UTF8MB4',
         charset: 'UTF8MB4_GENERAL_CI',
         // debug: true,

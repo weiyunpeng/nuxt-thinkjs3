@@ -1,70 +1,73 @@
-<template>
-    <section class="container">
-        <div>
-            <app-logo/>
-            <h1 class="title">
-                {{ name }}
-            </h1>
-            <h2 class="subtitle">
-                {{ description }}
-            </h2>
-            <div class="links">
-                <a
-                        href="https://nuxtjs.org/"
-                        target="_blank"
-                        class="button--green">Documentation</a>
-                <a
-                        href="https://github.com/nuxt/nuxt.js"
-                        target="_blank"
-                        class="button--grey">GitHub</a>
-            </div>
-        </div>
-    </section>
-</template>
-
-<script>
-  import AppLogo from '~/components/AppLogo.vue'
-
-  export default {
-    components: {
-      AppLogo
-    },
-    data () {
-      return {
-        name: 'hehe',
-        description: 'Nuxt.js test project'
-      }
-    }
-  }
-</script>
-
-<style>
-    .container {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .title {
-        font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-        display: block;
-        font-weight: 300;
-        font-size: 100px;
-        color: #35495e;
-        letter-spacing: 1px;
-    }
-
-    .subtitle {
-        font-weight: 300;
-        font-size: 42px;
-        color: #526488;
-        word-spacing: 5px;
-        padding-bottom: 15px;
-    }
-
-    .links {
-        padding-top: 15px;
-    }
+<style scoped>
+#about {
+    width: 1200px;
+    min-height: 500px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+.mu-card {
+    transition: 0.5s;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.page-wrap {
+    display: table;
+    margin: 0 auto;
+}
+.mu-card:hover {
+    transform: scale(1.01, 1.01);
+}
 </style>
+
+<template>
+    <div>
+        <my-header />
+        <div id="about">
+            <ul>
+                <li v-for="item in 10">
+                    <mu-card>
+                        <mu-card-text>
+                            散落在指尖的阳光，我试着轻轻抓住光影的踪迹，它却在眉宇间投下一片淡淡的阴影。
+                            调皮的阳光掀动了四月的心帘，温暖如约的歌声渐起。
+                            似乎在诉说着，我也可以在漆黑的角落里，找到阴影背后的阳光，
+                            找到阳光与阴影奏出和谐的旋律。我要用一颗敏感赤诚的心迎接每一缕滑过指尖的阳光！
+                        </mu-card-text>
+                        <mu-card-actions>
+                            <mu-flat-button label="Action 1" />
+                            <mu-flat-button label="Action 2" />
+                        </mu-card-actions>
+                    </mu-card>
+                </li>
+            </ul>
+
+            <!--分页-->
+            <div class="page-wrap">
+                <mu-pagination :total="total" :current="current" :pageSize="pageSize" @pageChange="handleClick">
+                </mu-pagination>
+            </div>
+
+        </div>
+        <my-footer />
+    </div>
+
+</template>
+<script>
+export default {
+    data() {
+        return {
+            total: 100,
+            current: 1,
+            pageSize: 6
+        };
+    },
+    computed: {},
+    props: [],
+    components: {},
+    methods: {
+        handleClick(current) {
+            alert(current);
+        }
+    },
+    mounted() {}
+};
+</script>

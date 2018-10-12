@@ -1,5 +1,4 @@
 module.exports = class extends think.Logic {
-  indexAction() {
-
-  }
+    __before() {}
+    indexAction() {}
 };

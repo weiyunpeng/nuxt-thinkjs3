@@ -11,6 +11,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_MuseUI_bc844676 from 'nuxt_plugin_MuseUI_bc844676' // Source: ../client/plugins/MuseUI
 
 
 // Component: <no-ssr>
@@ -132,6 +133,7 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
+  if (typeof nuxt_plugin_MuseUI_bc844676 === 'function') await nuxt_plugin_MuseUI_bc844676(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

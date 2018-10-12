@@ -32,7 +32,17 @@ module.exports = {
     /*
   ** Global CSS
   */
-  css: ['~assets/css/main.css'],
+    css: [
+        '~assets/css/main.css',
+        '~/assets/css/animate.min.css',
+        'muse-ui/dist/muse-ui.css'
+    ],
+    plugins: [
+        {
+            src: '~plugins/MuseUI',
+            ssr: true
+        }
+    ],
     /*
   ** Customize the progress-bar color
   */
