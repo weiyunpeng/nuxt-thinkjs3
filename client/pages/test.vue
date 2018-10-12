@@ -31,8 +31,8 @@
     },
     data () {
       return {
-        name: 'mystub Nuxt',
-        description: 'Nuxt.js project'
+        name: 'hehe',
+        description: 'Nuxt.js test project'
       }
     }
   }

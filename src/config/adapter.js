@@ -10,42 +10,44 @@ const isDev = think.env === 'development';
  * cache adapter config
  * @type {Object}
  */
-exports.cache = {
-  type: 'file',
-  common: {
-    timeout: 24 * 60 * 60 * 1000 // millisecond
-  },
-  file: {
-    handle: fileCache,
-    cachePath: path.join(think.ROOT_PATH, 'runtime/cache'), // absoulte path is necessarily required
-    pathDepth: 1,
-    gcInterval: 24 * 60 * 60 * 1000 // gc interval
-  }
-};
+// exports.cache = {
+//   type: 'file',
+//   common: {
+//     timeout: 24 * 60 * 60 * 1000 // millisecond
+//   },
+//   file: {
+//     handle: fileCache,
+//     cachePath: path.join(think.ROOT_PATH, 'runtime/cache'), // absoulte path is necessarily required
+//     pathDepth: 1,
+//     gcInterval: 24 * 60 * 60 * 1000 // gc interval
+//   }
+// };
+exports.cache = require('./adapter/cache');
 
 /**
  * model adapter config
  * @type {Object}
  */
-exports.model = {
-  type: 'mysql',
-  common: {
-    logConnect: isDev,
-    logSql: isDev,
-    logger: msg => think.logger.info(msg)
-  },
-  mysql: {
-    handle: mysql,
-    database: '',
-    prefix: 'think_',
-    encoding: 'utf8',
-    host: '127.0.0.1',
-    port: '',
-    user: 'root',
-    password: 'root',
-    dateStrings: true
-  }
-};
+// exports.model = {
+//     type: 'mysql',
+//     common: {
+//         logConnect: isDev,
+//         logSql: isDev,
+//         logger: msg => think.logger.info(msg)
+//     },
+//     mysql: {
+//         handle: mysql,
+//         database: '',
+//         prefix: 'think_',
+//         encoding: 'utf8',
+//         host: '127.0.0.1',
+//         port: '3306',
+//         user: 'root',
+//         password: '123456',
+//         dateStrings: true
+//     }
+// };
+exports.model = require('./adapter/model');
 
 /**
  * session adapter config
@@ -55,7 +57,7 @@ exports.session = {
   type: 'file',
   common: {
     cookie: {
-      name: 'thinkjs'
+      name: 'mystub'
       // keys: ['werwer', 'werwer'],
       // signed: true
     }
@@ -70,17 +72,18 @@ exports.session = {
  * view adapter config
  * @type {Object}
  */
-exports.view = {
-  type: 'nunjucks',
-  common: {
-    viewPath: path.join(think.ROOT_PATH, 'view'),
-    sep: '_',
-    extname: '.html'
-  },
-  nunjucks: {
-    handle: nunjucks
-  }
-};
+// exports.view = {
+//   type: 'nunjucks',
+//   common: {
+//     viewPath: path.join(think.ROOT_PATH, 'view'),
+//     sep: '_',
+//     extname: '.html'
+//   },
+//   nunjucks: {
+//     handle: nunjucks
+//   }
+// };
+exports.view = require('./adapter/view');
 
 /**
  * logger adapter config

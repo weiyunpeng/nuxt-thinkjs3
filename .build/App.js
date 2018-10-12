@@ -11,7 +11,7 @@ const layouts = { "_default": _6f6c098b }
 
 
 export default {
-  head: {"title":"starter","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"mystub","meta":[{"charset":"utf-8"},{"http-equiv":"cleartype","content":"on"},{"name":"author","content":"https:\u002F\u002Fweiyunpeng.github.io"},{"name":"MobileOptimized","content":"320"},{"name":"HandheldFriendly","content":"True"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"viewport","content":"width=device-width, initial-scale=1.0, user-scalable=no"},{"hid":"keywords","name":"keywords","content":"weiyunpeng,mystub"},{"hid":"description","name":"description","content":"https:\u002F\u002Fweiyunpeng.github.io"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')
