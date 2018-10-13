@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const _6dad6fdd = () => import('../client/pages/test.vue' /* webpackChunkName: "pages/test" */).then(m => m.default || m)
-const _60d64717 = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _25ec1bdb = () => import('../client/pages/jay.vue' /* webpackChunkName: "pages/jay" */).then(m => m.default || m)
+const _14734e4b = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
 
@@ -64,13 +64,13 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/test",
-			component: _6dad6fdd,
-			name: "test"
+			path: "/jay",
+			component: _25ec1bdb,
+			name: "jay"
 		},
 		{
 			path: "/",
-			component: _60d64717,
+			component: _14734e4b,
 			name: "index"
 		}
     ],

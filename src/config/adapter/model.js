@@ -17,15 +17,15 @@ module.exports = {
     mysql: {
         logConnect: isDev,
         handle: mysql,
-        database: 'picker',
-        prefix: 'picker_',
+        database: 'nideshop',
+        prefix: 'nideshop_',
         // charset: 'UTF8MB4',
         charset: 'UTF8MB4_GENERAL_CI',
         // debug: true,
         host: isDev ? '127.0.0.1' : '127.0.0.1',
         port: isDev ? '3306' : '3377',
         user: 'root',
-        password: '123456',
+        password: '123123',
         dateStrings: true
     }
 };

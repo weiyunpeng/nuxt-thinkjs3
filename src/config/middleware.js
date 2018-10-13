@@ -38,7 +38,7 @@ module.exports = [
     handle: nuxt,
     options: {
       config: config,
-      unless: [/^\/api?/, /^\/jay?/],
+      unless: [/^\/api?/, /^\/test?/],
       isDev: isDev
     }
   },
