@@ -25,7 +25,7 @@ module.exports = {
         host: isDev ? '127.0.0.1' : '127.0.0.1',
         port: isDev ? '3306' : '3377',
         user: 'root',
-        password: '123123',
+        password: '123456',
         dateStrings: true
     }
 };

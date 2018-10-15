@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const _25ec1bdb = () => import('../client/pages/jay.vue' /* webpackChunkName: "pages/jay" */).then(m => m.default || m)
-const _14734e4b = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _700ed7a7 = () => import('../client/pages/jay.vue' /* webpackChunkName: "pages/jay" */).then(m => m.default || m)
+const _60d64717 = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
 
@@ -65,12 +65,12 @@ export function createRouter () {
     routes: [
 		{
 			path: "/jay",
-			component: _25ec1bdb,
+			component: _700ed7a7,
 			name: "jay"
 		},
 		{
 			path: "/",
-			component: _14734e4b,
+			component: _60d64717,
 			name: "index"
 		}
     ],
