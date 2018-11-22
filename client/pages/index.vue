@@ -45,6 +45,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        background: url(https://cdn-daoaccount-prod.daocloud.io/static/img/blue-mountain.jpg)0 0 no-repeat;
+        background-size: 100%;
     }
 
     .title {
